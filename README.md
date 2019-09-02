@@ -1,24 +1,27 @@
-# README
+# Example Movie Comparison App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Medium Article Series
 
-Things you may want to cover:
+This repository holds the final version of the app created for a Medium article series guiding readers through creating self-joins and triple joins in Ruby on Rails. The first article is purely conceptual. The second article deals with the back-end. The third article contains basic, basic front-end. These are those articles:
 
-* Ruby version
+* Part 1:
+* Part 2:
+* Part 3:
 
-* System dependencies
+## Run this App
 
-* Configuration
+- Fork and Clone this repository to your local
 
-* Database creation
+From your terminal:
+- navigate inside the repository through your terminal `cd exampleMovieComparisonApp/`
+- run `bundle install` for any missing gem dependencies
+- Create the database `rails db:create`
+- Migrate tables into your database `rails db:migrate`
+- Seed the database with data in the db/seeds.rb file `rails db:seed`
+- Start a Rails server `rails s`
+- In your browser, type into your url `localhost:3000/users`
+- Or, for all movies, go to `localhost:3000/movies`
 
-* Database initialization
+If you're on the Users index page ('/users'), you'll see Christopher Nolan and Quentin Tarantino. Feel free to create more Users and Movies via the rails console using the `rails c` command in your terminal, followed by `Movie.create(title: #yourtitle, year: #youryear)` and/or `User.create(name: #yourusername)`. It could be a good challenge, if you so accept, to build forms and pages and routes in your Rails app such that you can create new users and movies directly from the browser! As of right now, the only change you can make to the database from the browser is creating new Comparisons from the User show page.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enjoy!
