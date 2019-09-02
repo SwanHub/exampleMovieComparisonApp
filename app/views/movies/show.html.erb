@@ -1,0 +1,19 @@
+<h1><%= @movie.title %></h1>
+  <h2><%= @movie.year %></h2>
+    <small><%= link_to "Back to All Movies", movies_path %></small>
+
+
+<h3> Victorious Comparisons: </h3>
+  <ul>
+    <% @movie.superior_comparisons.each do |comparison| %>
+    <li><%= comparison.user.name %> likes me more than <%= comparison.inferior_movie.title %></li>
+    <% end %>
+  </ul><br>
+
+
+<h3> Losing Comparisons: </h3>
+  <ul>
+    <% @movie.inferior_comparisons.each do |comparison| %>
+    <li><%= comparison.user.name %> thinks <%= comparison.superior_movie.title %> is better</li>
+    <% end %>
+  </ul>
